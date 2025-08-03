@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <title>AI RPG Creator Platform</title>
+    <script src="translations.js"></script>
+    <script src="authManager.js"></script>
+    <script src="chatManager.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="importmap" async>
+      {
+        "imports": {
+          "react": "https://esm.sh/react@19.1.0",
+          "react-dom/client": "https://esm.sh/react-dom@19.1.0/client",
+          "react-router": "https://esm.sh/react-router@7.5.2?deps=react@19.1.0,react-dom@19.1.0",
+          "motion/react": "https://esm.sh/motion/react?deps=react@19.1.0,react-dom@19.1.0"
+        }
+      }
+    </script>
+    <!-- Auth Components -->
+    <script type="text/babel" data-type="module" src="components/AuthModal.jsx"></script>
+    <script type="text/babel" data-type="module" src="components/UserProfile.jsx"></script>
+    <script type="text/babel" data-type="module" src="components/UserMenu.jsx"></script>
+    <!-- Core Components -->
+    <script type="text/babel" data-type="module" src="components/LanguageToggle.jsx"></script>
+    <script type="text/babel" data-type="module" src="components/GameStudio.jsx"></script>
+    <script type="text/babel" data-type="module" src="components/AIGenerator.jsx"></script>
+    <script type="text/babel" data-type="module" src="components/GamePlayer.jsx"></script>
+    <script type="text/babel" data-type="module" src="components/CreatorDashboard.jsx"></script>
+    <script type="text/babel" data-type="module" src="components/CommunityHub.jsx"></script>
+    <script type="text/babel" data-type="module" src="pages/Studio.jsx"></script>
+    <script type="text/babel" data-type="module" src="pages/Play.jsx"></script>
+    <script type="text/babel" data-type="module" src="pages/Dashboard.jsx"></script>
+    <script type="text/babel" data-type="module" src="pages/Community.jsx"></script>
+    <script type="text/babel" data-type="module" src="pages/Home.jsx"></script>
+    <script type="text/babel" data-type="module" src="app.jsx"></script>
+  </head>
+  <body>
+    <div id="renderDiv"></div>
+  </body>
+</html>

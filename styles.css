@@ -1,0 +1,95 @@
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.8);
+  }
+}
+
+@keyframes pulse-border {
+  0%, 100% {
+    border-color: rgba(168, 85, 247, 0.5);
+  }
+  50% {
+    border-color: rgba(168, 85, 247, 1);
+  }
+}
+
+body {
+  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #1e40af 100%);
+  color: white;
+  overflow-x: hidden;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.glass-morphism {
+  backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.animate-pulse-border {
+  animation: pulse-border 2s ease-in-out infinite;
+}
+
+.drag-item {
+  cursor: grab;
+  transition: all 0.2s ease;
+}
+
+.drag-item:active {
+  cursor: grabbing;
+  transform: rotate(5deg) scale(1.05);
+}
+
+.drop-zone {
+  min-height: 100px;
+  border: 2px dashed rgba(168, 85, 247, 0.3);
+  transition: all 0.3s ease;
+}
+
+.drop-zone.drag-over {
+  border-color: rgba(168, 85, 247, 0.8);
+  background: rgba(168, 85, 247, 0.1);
+  transform: scale(1.02);
+}
+
+.story-node {
+  position: relative;
+  min-height: 120px;
+  transition: all 0.3s ease;
+}
+
+.story-node:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.choice-button {
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.choice-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(168, 85, 247, 0.4);
+}
